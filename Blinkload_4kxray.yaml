@@ -11,12 +11,7 @@ cfw-latency-url: 'http://cp.cloudflare.com/generate_204'
 
 
 proxies:
-  - {"name":"🇭🇰 Anycast Hong Kong 01","type":"ss","server":"anycast.hk.868b.linkit.dev","port":20634,"cipher":"xchacha20-ietf-poly1305","password":"LPJivH","udp":true,"plugin":"obfs","plugin-opts":{"mode":"http","host":"ds.download.windowsupdate.com"}}
-  - {"name":"🇭🇰 Anycast Hong Kong 02","type":"ss","server":"anycast.hk.c7a0.linkit.dev","port":20634,"cipher":"xchacha20-ietf-poly1305","password":"LPJivH","udp":true,"plugin":"obfs","plugin-opts":{"mode":"http","host":"ds.download.windowsupdate.com"}}
-  - {"name":"🇭🇰 Anycast Hong Kong 03","type":"ss","server":"anycast.hk.ab6c.linkit.dev","port":20634,"cipher":"xchacha20-ietf-poly1305","password":"LPJivH","udp":true,"plugin":"obfs","plugin-opts":{"mode":"http","host":"ds.download.windowsupdate.com"}}
-  - {"name":"🇭🇰 Anycast Hong Kong 04","type":"ss","server":"anycast.hk.1016.linkit.dev","port":20634,"cipher":"xchacha20-ietf-poly1305","password":"LPJivH","udp":true,"plugin":"obfs","plugin-opts":{"mode":"http","host":"ds.download.windowsupdate.com"}}
-  - {"name":"🇭🇰 Anycast Hong Kong 05","type":"ss","server":"anycast.hk.621a.linkit.dev","port":20634,"cipher":"xchacha20-ietf-poly1305","password":"LPJivH","udp":true,"plugin":"obfs","plugin-opts":{"mode":"http","host":"ds.download.windowsupdate.com"}}
-  - {"name":"🇭🇰 独享香港-Trojan","type":"trojan","server":"hkdxtj1.ssrxray.xyz","port":2002,"password":"af638dd7-a1ed-39c9-8063-600adc9c16a7","sni":"hkdxtj1.ssrxray.xyz"}
+   - {"name":"🇭🇰 独享香港-Trojan","type":"trojan","server":"hkdxtj1.ssrxray.xyz","port":2002,"password":"af638dd7-a1ed-39c9-8063-600adc9c16a7","sni":"hkdxtj1.ssrxray.xyz"}
 
 proxy-groups:
 - name: "PROXY"
@@ -24,21 +19,11 @@ proxy-groups:
   proxies:
       - "URLTest 自动选择"
       - "Fallback 故障转移"
-      - 🇭🇰 Anycast Hong Kong 01
-      - 🇭🇰 Anycast Hong Kong 02
-      - 🇭🇰 Anycast Hong Kong 03
-      - 🇭🇰 Anycast Hong Kong 04
-      - 🇭🇰 Anycast Hong Kong 05
       - 🇭🇰 独享香港-Trojan
 
 - name: "URLTest 自动选择"
   type: url-test
   proxies:
-      - 🇭🇰 Anycast Hong Kong 01
-      - 🇭🇰 Anycast Hong Kong 02
-      - 🇭🇰 Anycast Hong Kong 03
-      - 🇭🇰 Anycast Hong Kong 04
-      - 🇭🇰 Anycast Hong Kong 05
       - 🇭🇰 独享香港-Trojan
 
   url: 'http://www.gstatic.com/generate_204'
@@ -47,11 +32,6 @@ proxy-groups:
 - name: "Fallback 故障转移"
   type: fallback
   proxies:
-      - 🇭🇰 Anycast Hong Kong 01
-      - 🇭🇰 Anycast Hong Kong 02
-      - 🇭🇰 Anycast Hong Kong 03
-      - 🇭🇰 Anycast Hong Kong 04
-      - 🇭🇰 Anycast Hong Kong 05
       - 🇭🇰 独享香港-Trojan
 
   url: 'http://www.gstatic.com/generate_204'
@@ -70,11 +50,6 @@ proxy-groups:
   type: select
   proxies:
     - "DIRECT"
-    - 🇭🇰 Anycast Hong Kong 01
-    - 🇭🇰 Anycast Hong Kong 02
-    - 🇭🇰 Anycast Hong Kong 03
-    - 🇭🇰 Anycast Hong Kong 04
-    - 🇭🇰 Anycast Hong Kong 05
     - 🇭🇰 独享香港-Trojan
 
 # Apple 服务代理
@@ -89,11 +64,6 @@ proxy-groups:
   proxies:
       - "PROXY"
       - "DIRECT"
-      - 🇭🇰 Anycast Hong Kong 01
-      - 🇭🇰 Anycast Hong Kong 02
-      - 🇭🇰 Anycast Hong Kong 03
-      - 🇭🇰 Anycast Hong Kong 04
-      - 🇭🇰 Anycast Hong Kong 05
       - 🇭🇰 独享香港-Trojan
 
 # 大陆流媒体面向港澳台限定服务
@@ -102,11 +72,6 @@ proxy-groups:
   proxies:
       - "DIRECT"
       - "PROXY"
-      - 🇭🇰 Anycast Hong Kong 01
-      - 🇭🇰 Anycast Hong Kong 02
-      - 🇭🇰 Anycast Hong Kong 03
-      - 🇭🇰 Anycast Hong Kong 04
-      - 🇭🇰 Anycast Hong Kong 05
       - 🇭🇰 独享香港-Trojan
 
 - name: "Ads"
